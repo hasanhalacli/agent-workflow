@@ -1,0 +1,10 @@
+.env
+*.db
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# uv.lock is deliberately COMMITTED - reproducible builds (see 04-blast-radius/)

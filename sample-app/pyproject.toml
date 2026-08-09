@@ -1,0 +1,24 @@
+[project]
+name = "invoice-service"
+version = "0.1.0"
+description = "Sample app for the agent-workflow series"
+requires-python = ">=3.11"
+
+# Exact pins, deliberately. Part four explains why ranges are a supply-chain
+# decision you're making whether you realise it or not.
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn==0.34.0",
+    "sqlalchemy==2.0.36",
+    "pydantic==2.10.4",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==8.3.4",
+    "httpx==0.28.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
