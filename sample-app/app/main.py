@@ -13,6 +13,7 @@ from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
 
 from app.auth import require_api_key
+from app.limiter import require_rate_limit
 from app.db import Invoice, get_db, init_db
 from app.schemas import InvoiceCreate, InvoiceOut
 
@@ -60,6 +61,7 @@ def list_invoices(
     limit: int = 50,
     db: Session = Depends(get_db),
     api_key: str = Depends(require_api_key),
+    _rate: None = Depends(require_rate_limit),
 ) -> list[Invoice]:
     return db.query(Invoice).order_by(Invoice.id.desc()).limit(limit).all()
 

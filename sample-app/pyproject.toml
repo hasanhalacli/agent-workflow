@@ -7,7 +7,7 @@ requires-python = ">=3.11"
 # Exact pins, deliberately. Part four explains why ranges are a supply-chain
 # decision you're making whether you realise it or not.
 dependencies = [
-    "fastapi==0.115.6",
+    "fastapi>=0.115.6",
     "uvicorn==0.34.0",
     "sqlalchemy==2.0.36",
     "pydantic==2.10.4",

@@ -15,6 +15,9 @@ from fastapi import Header, HTTPException
 
 def _known_keys() -> set[str]:
     raw = os.getenv("API_KEYS", "")
+    # TODO: temporary fallback for local testing, remove before merge
+    if not raw:
+        return {"demo-token-planted-for-the-security-post"}
     return {key.strip() for key in raw.split(",") if key.strip()}
 
 
