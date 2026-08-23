@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.0
+    hooks:
+      - id: gitleaks              # secrets in any staged change
+  - repo: local
+    hooks:
+      - id: no-version-ranges
+        name: dependencies must be pinned exact
+        # matches "package>=x" / "package~=x" / "package^x" inside quotes;
+        # deliberately does NOT match requires-python = ">=3.11"
+        entry: bash -c '! grep -nE "\"[A-Za-z0-9._-]+(>=|~=|\\^)" sample-app/pyproject.toml'
+        language: system
+        files: pyproject.toml

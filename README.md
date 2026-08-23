@@ -13,12 +13,12 @@ This is the companion repo to a five-part series on working with coding agents l
 | # | Post | Directory | What it demonstrates |
 |---|------|-----------|----------------------|
 | 1 | Plan Before You Prompt | [`01-planning/`](01-planning/) | Turning a vague ticket into a scoped, reviewable plan |
-| 2 | Prompting Is Context Engineering | `02-context/` | Weak vs. strong prompts, with the real output of each |
-| 3 | Delegating to Sub-Agents | `03-subagents/` | When a second agent pays for itself — and when it burns tokens |
-| 4 | Rules for the Blast Radius | `04-blast-radius/` | Security and dependency policy an agent can't route around |
-| 5 | Review Before You Push | `05-review/` | The review procedure — the part a human still owns |
+| 2 | Prompting Is Context Engineering | [`02-context/`](02-context/) | Weak vs. strong prompts, with the real output of each |
+| 3 | Delegating to Sub-Agents | [`03-subagents/`](03-subagents/) | When a second agent pays for itself — and when it burns tokens |
+| 4 | Rules for the Blast Radius | [`04-blast-radius/`](04-blast-radius/) | Security and dependency policy an agent can't route around |
+| 5 | Review Before You Push | [`05-review/`](05-review/) | The review procedure — the part a human still owns |
 
-*Directories appear as each post is published.*
+There is one **deliberately defective pull request left open** — an agent-written rate-limiter draft with three planted problems. The CI gates fail it, and [`05-review/REVIEW-REPORT.md`](05-review/REVIEW-REPORT.md) is the human review that catches all three. That PR is the whole thesis in one artifact.
 
 ## The sample app
 
