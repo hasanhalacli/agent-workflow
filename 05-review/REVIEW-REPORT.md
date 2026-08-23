@@ -26,8 +26,8 @@ be first — the gate knows the pattern, not the intent.
 `pyproject.toml`, caught at **step 2** (dependency diff):
 
 ```diff
--    "fastapi==0.115.6",
-+    "fastapi>=0.115.6",
+-    "fastapi==0.141.1",
++    "fastapi>=0.141.1",
 ```
 
 Smuggled into the feature commit with no mention in the summary. A range
