@@ -18,7 +18,7 @@ This repo contains **deliberately planted defects** on the branch `feature/rate-
 2. A dependency pin loosened to a version range, smuggled into an unrelated feature commit
 3. A test that executes the code path but asserts nothing
 
-The CI gates fail that PR. Open it and look at the red X — that's the Block layer doing what the Ask layer can't guarantee.
+The CI gates fail that PR — on the loosened pin. Open it and look at the red X: that's the Block layer doing what the Ask layer can't guarantee. Look closer, too: the secrets scan passes the planted token, because the token matches no known key format. A block stops only what its patterns know; the review in `05-review/` catches the rest.
 
 ## The one-liner that summarizes the post
 

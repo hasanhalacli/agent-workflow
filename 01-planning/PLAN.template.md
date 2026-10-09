@@ -1,8 +1,8 @@
 # Plan: <one line, what changes for the user>
 
 > Copy this file to `PLAN.md` in your working branch. Fill it in *with* the
-> agent — it drafts, you correct. Commit it. Delete it when the work merges,
-> or keep it in the PR description as the record of intent.
+> agent — it drafts, you correct. Commit it, and keep it in the repository
+> when the work merges: it is the record of intent.
 
 ## Goal
 

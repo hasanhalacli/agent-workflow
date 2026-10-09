@@ -18,7 +18,7 @@ This is the companion repo to a five-part series on working with coding agents l
 | 4 | Rules for the Blast Radius | [`04-blast-radius/`](04-blast-radius/) | Security and dependency policy an agent can't route around |
 | 5 | Review Before You Push | [`05-review/`](05-review/) | The review procedure — the part a human still owns |
 
-There is one **deliberately defective pull request left open** — an agent-written rate-limiter draft with three planted problems. The CI gates fail it, and [`05-review/REVIEW-REPORT.md`](05-review/REVIEW-REPORT.md) is the human review that catches all three. That PR is the whole thesis in one artifact.
+There is one **deliberately defective pull request left open** — an agent-written rate-limiter draft with three planted problems. The CI gates fail it on the loosened dependency pin; the secrets scan does not recognise the planted token, which is exactly why the human review matters. [`05-review/REVIEW-REPORT.md`](05-review/REVIEW-REPORT.md) is the human review that catches all three. That PR is the whole thesis in one artifact.
 
 ## The sample app
 
@@ -41,7 +41,7 @@ The git history is part of the material: tags mark each stage of the worked exam
 
 ## A note on the planted defects
 
-From part four onward this repo contains **deliberately introduced problems** — a hardcoded credential, a suspicious dependency bump, an over-engineered abstraction. They exist so the security, dependency and review posts have something real to catch.
+From part four onward this repo contains **deliberately introduced problems** — a hardcoded credential, a suspicious dependency bump, a test that asserts nothing. They exist so the security, dependency and review posts have something real to catch.
 
 They are clearly marked, obviously fake, and none of them are real credentials. Don't copy those files into anything.
 

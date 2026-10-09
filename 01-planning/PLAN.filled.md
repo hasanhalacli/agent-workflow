@@ -67,7 +67,7 @@ uv run uvicorn app.main:app   # still boots
 ```
 
 Done when the 101st request from a standard key inside one minute returns
-`429` with a `Retry-After` header, the 101st from a partner key returns `201`,
+`429` with a `Retry-After` header, the 101st from a partner key is served (`200`),
 and the full suite is green.
 
 ## Open questions

@@ -34,6 +34,6 @@ Auth is an `X-API-Key` header checked against a comma-separated `API_KEYS` env v
 
 ## Deliberate defects (from part four onward)
 
-Later stages of the series introduce real problems on purpose — a hardcoded credential, a suspicious dependency bump, an over-engineered abstraction — so the security, dependency and review posts have something to actually catch.
+Later stages of the series introduce real problems on purpose — a hardcoded credential, a suspicious dependency bump, a test that asserts nothing — so the security, dependency and review posts have something to actually catch.
 
 They're marked in the commit that adds them and the review that finds them. **None of them are real credentials.** Use `git log --oneline` and the step tags to see where each was planted and caught.

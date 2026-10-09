@@ -18,8 +18,9 @@ three findings, two of them blockers.
 A missing env var now silently authenticates a known token in every
 environment that forgets to set `API_KEYS` — which is exactly the
 environment that gets breached. The rules file said fail loudly; the agent
-chose helpful. The CI secrets gate also flags this, but the reviewer should
-be first — the gate knows the pattern, not the intent.
+chose helpful. The CI secrets scan does **not** flag this token: it matches no
+known key format, and the scan step passed in the PR's CI run. Only the
+reviewer caught it — the gate knows patterns, not intent.
 
 ## Finding 2 — dependency pin loosened in an unrelated commit (blocker)
 
